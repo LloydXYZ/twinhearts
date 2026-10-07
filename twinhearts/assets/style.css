@@ -1,0 +1,226 @@
+:root {
+  --ink: #2b2226;
+  --rose: #8c3b52;
+  --blush: #f7ecee;
+  --gold: #b48a4a;
+  --line: #e5d6d9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font:
+    16px/1.6 Karla,
+    sans-serif;
+  color: var(--ink);
+  background: #fff;
+}
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+h1 {
+  font-size: 2.4rem;
+  margin: 0.2em 0 0.6em;
+}
+a {
+  color: var(--rose);
+}
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 2rem 1.2rem 4rem;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.logo {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--rose);
+}
+nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav a {
+  text-decoration: none;
+  color: var(--ink);
+}
+nav a.btn {
+  color: #fff;
+}
+.btn,
+button {
+  background: var(--rose);
+  color: #fff;
+  border: 0;
+  padding: 0.65rem 1.3rem;
+  border-radius: 3px;
+  font: 600 1rem Karla;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn.sm,
+button.sm {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+}
+button.ghost {
+  background: #fff;
+  color: var(--rose);
+  border: 1px solid var(--rose);
+}
+.hero {
+  padding: 4rem 0 3rem;
+  max-width: 640px;
+}
+.hero h1 {
+  font-size: 3.8rem;
+}
+.hero p {
+  font-size: 1.15rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.card {
+  border: 1px solid var(--line);
+  padding: 1.3rem;
+  background: var(--blush);
+}
+.card h3 {
+  margin: 0.1em 0;
+}
+.price {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+form.f {
+  max-width: 520px;
+  display: grid;
+  gap: 0.9rem;
+}
+label {
+  display: grid;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+input,
+select,
+textarea {
+  padding: 0.6rem;
+  border: 1px solid #cdb9bd;
+  border-radius: 3px;
+  font: inherit;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+th,
+td {
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: var(--blush);
+}
+.flash {
+  background: #fff4d6;
+  border-left: 4px solid var(--gold);
+  padding: 0.7rem 1rem;
+}
+.b {
+  padding: 0.1rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  background: #eee;
+}
+.b.pending {
+  background: #fff1c9;
+}
+.b.approved,
+.b.verified,
+.b.completed,
+.b.returned,
+.b.available {
+  background: #d8f1dc;
+}
+.b.declined,
+.b.rejected {
+  background: #f8d6d6;
+}
+.adm {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 70vh;
+}
+.adm aside {
+  background: var(--ink);
+  padding: 1rem 0;
+}
+.adm aside a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+}
+.adm aside a.on,
+.adm aside a:hover {
+  background: var(--rose);
+}
+.adm section {
+  padding: 1.5rem 2rem;
+  overflow-x: auto;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+}
+.stat {
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+.stat b {
+  font: 700 2rem "Cormorant Garamond";
+}
+.inline {
+  display: inline;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--line);
+  color: #7a6a6e;
+}
+@media (max-width: 700px) {
+  .adm {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+}
